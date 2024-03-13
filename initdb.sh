@@ -1,0 +1,1 @@
+sqlite3 /sqlitedata/database.sqlite3 "create table hits(x int);"
