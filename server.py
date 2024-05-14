@@ -12,6 +12,8 @@ def get_db():
     db = getattr(g, "_database", None)
     if db is None:
         db = g._database = sqlite3.connect(DATABASE)
+        # create table if it does not exist
+        db.execute("create table if not exists hits (x int)")
     return db
 
 
